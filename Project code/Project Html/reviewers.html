@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reviewers</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <aside class="sidebar">
+    <h2 class ="logo"><i><b>LegalFlow</b></i></h2>
+    <nav>
+        <ul>
+           <li><a href="index.html">🏠 Dashboard</a></li>
+
+<li><a href="documents.html">📄 Documents</a></li>
+
+<li><a href="reviewers.html" class="active">👥 Reviewers</a></li>
+
+<li><a href="index.html#status">📊 Review Status</a></li>
+
+<li><a href="index.html#comments">🏷️ Tags and Comments</a></li>
+
+<li><a href="index.html#priority">✨ Priority</a></li>
+
+<li><a href="index.html#history">📜 Document History</a></li>
+
+        </ul>
+    </nav>
+</aside>
+<main class="main-content">
+    <header class="pageheader">
+        <div>
+            <h1>Reviewers</h1>
+            <p> Manage your Review team</p>
+
+        </div>
+       <button class="add-btn" id="addReviewerBtn" type="button">
+    + Add Reviewer
+</button>
+
+<div class="reviewer-form-container" id="reviewerFormContainer" hidden>
+    <form id="reviewerForm">
+
+        <h3>Add New Reviewer</h3>
+
+        <input type="text" id="reviewerName"
+            placeholder="Reviewer Name" required>
+
+        <input type="email" id="reviewerEmail"
+            placeholder="Email Address" required>
+
+        <input type="text" id="reviewerRole"
+            placeholder="Reviewer Role" required>
+
+        <select id="reviewerAvailability">
+            <option value="Available">Available</option>
+            <option value="Busy">Busy</option>
+        </select>
+
+        <button type="submit">Save Reviewer</button>
+
+        <button type="button" id="cancelReviewer">Cancel</button>
+
+    </form>
+</div>
+</div>
+    </header>
+    <section class="stat-container">
+        <div class="stat-card">
+            <h3>Total Reviewer</h3>
+            <h2>12</h2>
+        </div>
+        <div class="stat-card">
+            <h3>Active Reviewers</h3>
+            <h2>08</h2>
+        </div>
+        <div class="stat-card">
+            <h3>Available Reviewers</h3>
+            <h2>04</h2>
+        </div>
+    </section>
+    <section class="reviewer-section">
+        <h2>Our Review Team</h2>
+        <div class="reviewer-container">
+            <div class="reviewer-card">
+                <div class="reviewer-avatar">
+                    RS
+                    </div>
+                    <h3>Rahul Singh</h3>
+                <p>rahul@gmail.com</p>
+                <p>Senior Legal Reviewer</p>
+                <span>Available</span>
+            </div>
+            <div class="reviewer-card">
+                <div class="reviewer-avatar">
+                    PS
+                </div>
+                <h3>Priya Singh</h3>
+                <p>priya@gmail.com</p>
+                <p>Legal Analyst</p>
+                <span>Busy</span>
+            </div>
+            <div class="reviewer-card">
+                <div class="reviewer-avatar">
+                    AV
+                </div>
+                <h3>Aman Verma</h3>
+                <p>aman@gmail.com</p>
+                <p>Document Reviewer</p>
+                <span>Available</span>
+            </div>
+
+        </div>
+    </section>
+</main>
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,212 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LegalFlow | Document Review Workflow</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <h1>⚖️LegalFlow</h1>
+
+            <nav>
+                <a href="#" class="active">🏠 Dashboard</a>
+                <a href="#documents">📄 Documents</a>
+                <a href="#reviewers">👥 Reviewers</a>
+                <a href="#status">📊 Review Status</a>
+                <a href="#tags">🏷️ Tags & Comments</a>
+                <a href="#priority">🔴 Priority</a>
+                <a href="#history">🕒 Document History</a>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+
+            <header class="topbar">
+                <div>
+                    <h1>Dashboard</h1>
+                    <p>Manage your legal documents efficiently.</p>
+                </div>
+
+                <div class="profile">
+                    👤 Admin
+                </div>
+            </header>
+
+            <!-- Welcome Section -->
+            <section class="welcome">
+                <h2>Welcome to LegalFlow! 👋</h2>
+                <p>Your workspace for managing legal document reviews.</p>
+            </section>
+
+            <!-- Statistics Cards -->
+            <section class="stats">
+
+                <div class="card">
+                    <h3>Total Documents</h3>
+                    <p class="number" id="totalDocuments">24</p>
+                </div>
+
+                <div class="card">
+                    <h3>Pending Reviews</h3>
+
+                    <p class="number" id="pendingReviews">08</p>
+                </div>
+
+                <div class="card">     
+                    <h3>Approved</h3>
+                    <p class="number" id="approved">12</p>
+                </div>
+
+                <div class="card">
+                    <h3>High Priority</h3>
+                    <p class="number" id="highPriority">04</p>
+                </div>
+
+            </section>
+
+            <!-- Documents Section -->
+            <section class="documents" id="documents">
+
+                <div class="section-heading">
+                    <h2>Recent Documents</h2>
+                    <input 
+                    type="text" 
+                    id="documentSearch"
+                    placeholder="Search documents...">
+                    <button id="addDocumentBtn"
+                    type="button">
+                + Add Document 
+            </button>
+                </div>
+
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Document Name</th>
+                                <th>Reviewer</th>
+                                <th>Status</th>
+                                <th>Priority</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td><button type = "button" class="document-link" data-document = "Employment Contract"> Employment Contract</button> </td>
+                                <td>Rahul Sharma</td>
+                                <td><span class="status pending">Pending</span></td>
+                                <td><span class="priority high">High</span></td>
+                            </tr>
+
+                            <tr>
+                                <td><button type =" button" class="document-link" data-document ="Service Agreement">Sevice Agreement</button></td>
+                                <td>Priya Singh</td>
+                                <td><span class="status reviewing">In Review</span></td>
+                                <td><span class="priority medium">Medium</span></td>
+                            </tr>
+
+                            <tr>
+                                <td><button type =" button" class="document-link" data-document ="Partnership Deed">Partnership Deed</button></td>
+                                <td>Aman Verma</td>
+                                <td><span class="status approved">Approved</span></td>
+                                <td><span class="priority low">Low</span></td>
+                            </tr>
+
+                            <tr>
+                                <td><button type="button" class ="document-link" data-document ="Confidentiality Agreement">Confidentiality Agreement</button></td>
+                                <td>Neha Kapoor</td>
+                                <td><span class="status pending">Pending</span></td>
+                                <td><span class="priority high">High</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </section>
+
+            <footer>
+                <p>© 2026 LegalFlow | Legal Document Review Workflow</p>
+            </footer>
+
+        </main>
+
+    </div>
+<div class="document-form-container" hidden>
+
+    <form id="documentForm" class="document-form">
+
+        <h3>Add New Document</h3>
+
+        <input
+            type="text"
+            id="documentName"
+            placeholder="Document Name"
+            required
+        >
+
+        <input
+            type="text"
+            id="reviewerName"
+            placeholder="Reviewer Name"
+            required
+        >
+
+        <select id="documentStatus">
+            <option value="pending">Pending</option>
+            <option value="reviewing">In Review</option>
+            <option value="approved">Approved</option>
+        </select>
+
+        <select id="documentPriority">
+            <option value="high">High</option>
+            <option value="medium">Medium</option>
+            <option value="low">Low</option>
+        </select>
+
+        <button type="submit">Save Document</button>
+
+        <button type="button" id="cancelDocumentBtn">
+            Cancel
+        </button>
+
+    </form>
+
+</div>
+
+
+
+
+
+<div class="document-modal" id="documentModal" hidden>
+    <button class ="close-modal" id ="closeModal">&times;</button>
+    <h2 id="modalTitle">Document Details</h2>
+    <div class="detail-item">
+        <strong>Reviewer:</strong>
+        <span id="modalReviewer">Not assigned</span>
+    </div>
+<div class="detail-item">
+    <strong>Status:</strong>
+    <span id="modalStatus">Pending</span>
+</div>
+
+    <div class="detail-item">
+        <strong>Priority:</strong>
+        <span id="modalPriority">Medium</span>
+    </div>
+
+</div>
+
+
+<script src="script.js"></script>
+</body>
+</html>
+
+
