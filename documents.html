@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Legal Flow | Documents </title>
+     <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+<aside class="sidebar">
+    <h2 class ="logo"><i><b>LegalFlow</b></i></h2>
+    <nav>
+        <ul>
+            <li><a href="index.html">🏠Dashboard</a></li>
+            <li><a href="documents.html" class= "active">📃Documents</a></li>
+            <li><a href="reviewers.html">🧑‍🤝‍🧑Reviewers</a></li>
+            <li><a href="status.html">📊Review Status</a></li>
+            <li><a href="comments.html">🏷️Tags And Comment</a></li>
+            <li><a href="priority.html">✨ Priority</a></li>
+            <li><a href="#">📜 Document History</a></li>
+
+        </ul>
+    </nav>
+</aside>
+
+<main class="main-content">
+
+    <div class="page-header">
+        <div>
+            <h1>Documents</h1>
+            <p>Manage and track all your legal documents.</p>
+        </div>
+
+        <button id="addDocumentBtn" class="add-btn">
+            + Add Document
+        </button>
+    </div>
+    
+
+    <!-- Search -->
+    <div class="search-container">
+        <input
+            type="text"
+            id="documentSearch"
+            placeholder="Search documents..."
+        >
+    </div>
+
+    <!-- Documents Table -->
+    <section class="table-container">
+
+        <table class="documents">
+            <thead>
+                <tr>
+                    <th>Document Name</th>
+                    <th>Reviewer</th>
+                    <th>Status</th>
+                    <th>Priority</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>Employment Contract</td>
+                    <td>Rahul Sharma</td>
+                    <td><span class="status pending">Pending</span></td>
+                    <td><span class="priority high">High</span></td>
+                </tr>
+
+                <tr>
+                    <td>Service Agreement</td>
+                    <td>Priya Singh</td>
+                    <td><span class="status reviewing">In Review</span></td>
+                    <td><span class="priority medium">Medium</span></td>
+                </tr>
+
+                <tr>
+                    <td>Partnership Deed</td>
+                    <td>Aman Verma</td>
+                    <td><span class="status approved">Approved</span></td>
+                    <td><span class="priority low">Low</span></td>
+                </tr>
+            </tbody>
+        </table>
+
+    </section>
+
+</main>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
